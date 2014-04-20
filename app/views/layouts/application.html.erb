@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Progmng</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div class="mainmenu">
+		<b><nav>
+			<%= link_to("DASHBOARD") %>
+			<%= link_to("PROJECTS") %>
+			<%= link_to("TODO LISTS") %>
+			<%= link_to("TAREAS") %>
+			<%= link_to("CALENDAR") %>
+			<%= link_to("PEOPLE") %>
+			<%= link_to("HISTORY") %>
+		</nav></b>
+	</div>
+
+	<div class="settingbar">
+		<nav>
+			<%= link_to("Shortcuts") %>
+			<%= link_to("Switch Projects") %>
+			<%= link_to("Settings") %>
+		</nav>
+	</div>
+
+	<div class="projectbar">
+		<h1>Barra del proyecto</h1>
+	</div>
+
+	<div class="userbar">
+		<h1>Barra del usuario</h1>
+	</div>
+
+	<div class="leftbar">
+		<h2>Barra lateral</h2>
+	</div>
+
+	<div class="rightbar">
+		<div class="contenido">
+			<%= yield %>
+		</div>
+		<div class="pie">
+			<h2>Pié de Página</h2>
+		</div>
+	</div>
+	
+
+
+</body>
+</html>
