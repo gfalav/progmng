@@ -1,4 +1,32 @@
 Rails.application.routes.draw do
+  resources :archivo_hitos
+
+  resources :archivo_tareas
+
+  resources :archivo_listtareas
+
+  resources :archivo_proyectos
+
+  resources :user_hitos
+
+  resources :user_tareas
+
+  resources :user_listtareas
+
+  resources :user_proyectos
+
+  resources :archivos
+
+  resources :users
+
+  resources :hitos
+
+  resources :tareas
+
+  resources :listtareas
+
+  resources :proyectos
+
   resources :empresas
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proyecto_id: 1
+  lista: MyString
+  descripcion: MyText
+  elista: MyString
+  lider_id: 1
+  falta: 2014-04-20 20:09:23
+  fvcto: 2014-04-20 20:09:23
+  fuce: 2014-04-20 20:09:23
+  fcierre: 2014-04-20 20:09:23
+
+two:
+  proyecto_id: 1
+  lista: MyString
+  descripcion: MyText
+  elista: MyString
+  lider_id: 1
+  falta: 2014-04-20 20:09:23
+  fvcto: 2014-04-20 20:09:23
+  fuce: 2014-04-20 20:09:23
+  fcierre: 2014-04-20 20:09:23

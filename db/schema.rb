@@ -11,10 +11,46 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140420202257) do
+ActiveRecord::Schema.define(version: 20140420231402) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "archivo_hitos", force: true do |t|
+    t.integer  "archivo_id"
+    t.integer  "hito_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "archivo_listtareas", force: true do |t|
+    t.integer  "archivo_id"
+    t.integer  "listtarea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "archivo_proyectos", force: true do |t|
+    t.integer  "archivo_id"
+    t.integer  "proyecto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "archivo_tareas", force: true do |t|
+    t.integer  "archivo_id"
+    t.integer  "tarea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "archivos", force: true do |t|
+    t.string   "nombre"
+    t.datetime "falta"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "empresas", force: true do |t|
     t.string   "nombre"
@@ -26,6 +62,110 @@ ActiveRecord::Schema.define(version: 20140420202257) do
     t.string   "logofile"
     t.integer  "lider_id"
     t.datetime "falta"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hitos", force: true do |t|
+    t.integer  "proyecto_id"
+    t.string   "nombre"
+    t.text     "description"
+    t.datetime "falta"
+    t.datetime "ffin"
+    t.integer  "responsable_id"
+    t.integer  "thito"
+    t.integer  "ehito"
+    t.integer  "privada"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "listtareas", force: true do |t|
+    t.integer  "proyecto_id"
+    t.string   "lista"
+    t.text     "descripcion"
+    t.string   "elista"
+    t.integer  "lider_id"
+    t.datetime "falta"
+    t.datetime "fvcto"
+    t.datetime "fuce"
+    t.datetime "fcierre"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "proyectos", force: true do |t|
+    t.integer  "empresa_id"
+    t.string   "nombre"
+    t.text     "description"
+    t.string   "comitente"
+    t.string   "lider"
+    t.datetime "falta"
+    t.datetime "fuce"
+    t.datetime "fcierre"
+    t.string   "logofile"
+    t.string   "eproyecto"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tareas", force: true do |t|
+    t.integer  "listtarea_id"
+    t.string   "nombre"
+    t.text     "description"
+    t.datetime "falta"
+    t.datetime "fplanvcto"
+    t.datetime "ffin"
+    t.datetime "fuce"
+    t.integer  "responsable"
+    t.float    "avance"
+    t.integer  "ttarea"
+    t.integer  "etarea"
+    t.integer  "privada"
+    t.integer  "trepeticion"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_hitos", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "hito_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_listtareas", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "listtarea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_proyectos", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "proyecto_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "user_tareas", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "tarea_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "users", force: true do |t|
+    t.string   "nombre"
+    t.string   "apellido"
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "fvctopass"
+    t.string   "origen"
+    t.string   "telefono"
+    t.integer  "timezone"
+    t.string   "photofile"
+    t.string   "profile"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

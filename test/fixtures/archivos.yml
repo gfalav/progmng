@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  falta: 2014-04-20 20:09:58
+  user_id: 1
+
+two:
+  nombre: MyString
+  falta: 2014-04-20 20:09:58
+  user_id: 1

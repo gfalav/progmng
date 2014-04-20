@@ -37,7 +37,7 @@ rails generate scaffold tarea listtarea_id:integer nombre:string description:tex
 
 rails generate scaffold hito proyecto_id:integer nombre:string description:text falta:datetime ffin:datetime responsable_id:integer thito:integer ehito:integer privada:integer
 
-rails generate scaffold user nombre:string apellido:string email:string password:digest fvctopass: datetime origen:string telefono:string timezone:integer photofile:string profile:string
+rails generate scaffold user nombre:string apellido:string email:string password:digest fvctopass:datetime origen:string telefono:string timezone:integer photofile:string profile:string
 
 rails generate scaffold archivo nombre:string falta:datetime user_id:integer
 
