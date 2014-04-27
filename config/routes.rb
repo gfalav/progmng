@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'session/new'
+
+  get 'session/create'
+
+  get 'session/destroy'
+
+  get 'raiz/index'
+
   resources :archivo_hitos
 
   resources :archivo_tareas
@@ -33,7 +41,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'raiz#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

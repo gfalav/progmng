@@ -25,6 +25,9 @@ a {
   }
 }
 
+table, td, th {
+	border: 1px solid black;
+}
 
 .mainmenu {
 	height: 30px;
@@ -82,6 +85,15 @@ a {
 }
 
 .pie {
+	background-color: #D7D7D9;
 	height: 50px;
+}
+
+.userapila {
+	float: left;
+}
+
+.usersolo {
+	clear: both;
 }
 

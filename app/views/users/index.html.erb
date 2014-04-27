@@ -1,4 +1,4 @@
-<h1>Listing users</h1>
+<h1>Lista de Usuarios</h1>
 
 <% if notice %>
   <p id="notice"><%= notice %></p>
@@ -7,15 +7,14 @@
 <table>
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Apellido</th>
-      <th>Email</th>
-      <th>Fvctopass</th>
-      <th>Origen</th>
-      <th>Telefono</th>
-      <th>Timezone</th>
-      <th>Photofile</th>
-      <th>Profile</th>
+      <th style="width: 70px;">Photofile</th>
+      <th style="width: 100px;">Apellido</th>
+      <th style="width: 100px;">Nombre</th>
+      <th style="width: 160px;">Email</th>
+      <th style="width: 100px;">Dirección</th>
+      <th style="width: 80px;">Teléfono</th>
+      <th style="width: 60px;">Timezone</th>
+      <th style="width: 120px;">Perfil</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -23,14 +22,13 @@
   <tbody>
     <% @users.each do |user| %>
       <tr>
-        <td><%= user.nombre %></td>
+        <td style="text-align:center;"><%= image_tag(user.photofile, :size=>"60x60") %></td>
         <td><%= user.apellido %></td>
+        <td><%= user.nombre %></td>
         <td><%= user.email %></td>
-        <td><%= user.fvctopass %></td>
         <td><%= user.origen %></td>
         <td><%= user.telefono %></td>
         <td><%= user.timezone %></td>
-        <td><%= user.photofile %></td>
         <td><%= user.profile %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
